@@ -21,7 +21,7 @@ const header = () => {
                         <Link href="/about" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>About</Link>
                         <Link href="/contact" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>Contact</Link>
                         <Button className='bg-rose-500 text-white cursor-pointer ml-6 text-base font-semibold hover:bg-rose-600 transition-colors duration-300'>
-                            Login
+                            <Link href='/login'>Login</Link>
                         </Button>
                     </nav>
                 </div>
