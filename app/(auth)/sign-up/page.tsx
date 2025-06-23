@@ -17,11 +17,11 @@ const page = () => {
                         height={100}
                         className='mx-auto mb-4 w-40 object-contain'
                     />
-                    <h1 className='text-2xl font-bold text-center'>Login</h1>
+                    <h1 className='text-2xl font-bold text-center'>Sign Up</h1>
                     <p className="text-sm text-gray-500 mb-4">
-                        Welcome back! Please enter your details to log in.
+                        Create your account by filling in the details below.
                     </p>
-
+                    
                     <Button className="bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 w-full flex items-center justify-center gap-2 duration-300">
                         <Image
                             src="/images/google-logo.png"
@@ -35,31 +35,23 @@ const page = () => {
 
 
                     <Separator className='my-4' />
-
+                    <div className='flex flex-col gap-2'>
+                        <Label htmlFor="username">Username</Label>
+                        <Input className="text-sm" type="username" id="username" placeholder="Username" />
+                    </div>
                     <div className='flex flex-col gap-2'>
                         <Label htmlFor="email">Email</Label>
                         <Input className="text-sm" type="email" id="email" placeholder="Enter your email" />
                     </div>
-                    <div className='flex flex-col gap-2'>
-                        <Label htmlFor="password">Password</Label>
-                        <Input className="text-sm" type="email" id="password" placeholder="Enter your email" />
-                    </div>
 
-                    <div className='flex items-center justify-between mt-2'>
-                        <div className='flex items-center gap-2'>
-                            <input type="checkbox" id="remember" className="accent-rose-500" />
-                            <Label htmlFor="remember" className='text-sm text-gray-500'>Remember me</Label>
-                        </div>
-                        <Link href="/forgot-password" className='text-sm text-rose-500 hover:underline'>Forgot Password?</Link>
-                    </div>
-                    <Button className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Login</Button>
+                    <Button className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Sign Up</Button>
 
 
 
                     <p className='text-sm text-gray-500'>
-                        Don&apos;t have an account?
-                        <Link href="/sign-up" className='text-blue-500 hover:underline'>
-                            <Button variant={'link'} className="text-rose-500 cursor-pointer">Sign Up</Button>
+                        Already have an account?
+                        <Link href="/login" className='text-blue-500 hover:underline'>
+                            <Button variant={'link'} className="text-rose-500 cursor-pointer">Sign In</Button>
                         </Link>
                     </p>
                 </div>
