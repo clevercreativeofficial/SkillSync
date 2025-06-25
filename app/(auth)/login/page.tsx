@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -22,20 +21,6 @@ const page = () => {
                         Welcome back! Please enter your details to log in.
                     </p>
 
-                    <Button className="bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 w-full flex items-center justify-center gap-2 duration-300">
-                        <Image
-                            src="/images/google-logo.png"
-                            alt="Google Icon"
-                            width={20}
-                            height={20}
-                            className='mr-1'
-                        />
-                        Google
-                    </Button>
-
-
-                    <Separator className='my-4' />
-
                     <div className='flex flex-col gap-2'>
                         <Label htmlFor="email">Email</Label>
                         <Input className="text-sm" type="email" id="email" placeholder="Enter your email" />
@@ -54,7 +39,16 @@ const page = () => {
                     </div>
                     <Button className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Login</Button>
 
-
+                    <Button className="bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 w-full flex items-center justify-center gap-2 duration-300">
+                        <Image
+                            src="/images/google-logo.png"
+                            alt="Google Icon"
+                            width={20}
+                            height={20}
+                            className='mr-1'
+                        />
+                        Google
+                    </Button>
 
                     <p className='text-sm text-gray-500'>
                         Don&apos;t have an account?
