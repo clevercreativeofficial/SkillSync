@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -46,6 +47,10 @@ body {
 
 .title{
   font-family: var(--font-inter);
+}
+
+i.fi{
+  transform: translateY(0.125rem);
 }
 
 @theme inline {
