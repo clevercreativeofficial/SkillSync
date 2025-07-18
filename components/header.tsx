@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { usePathname } from 'next/navigation'
-import { Switch } from "@/components/ui/switch"
+// import { Switch } from "@/components/ui/switch"
 
 const Header = () => {
     const path = usePathname();
@@ -22,7 +22,7 @@ const Header = () => {
                             className='w-40 object-contain'
                         />
                     </Link>
-                    <nav className='space-x-6'>
+                    <nav className='md:block hidden space-x-6'>
                         <Link href="/" className={`${path === '/' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Home</Link>
                         <Link href="/features" className={`${path === '/features' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Features</Link>
                         <Link href="/explore" className={`${path === '/explore' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Explore</Link>
@@ -31,9 +31,12 @@ const Header = () => {
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <Switch className="translate-y-0.5" />
-                        <Button className="bg-accent hover:bg-accent/50 text-foreground" size="sm">
+                        {/* <Switch className="translate-y-0.5" /> */}
+                        <Button variant="ghost" className="hover:text-background" size="sm">
                             <Link href='/login'>Login</Link>
+                        </Button>
+                        <Button size="sm">
+                            <Link href='/login'>Sign Up</Link>
                         </Button>
                     </div>
                 </div>

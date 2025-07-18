@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-background pt-16 pb-6">
-            <Container>
+            <Container variant='xl'>
                 <div className="flex flex-col gap-12">
                     <div className="flex justify-between sm:flex-row flex-col gap-6">
                         <div className="max-w-[415px] w-full flex flex-col">

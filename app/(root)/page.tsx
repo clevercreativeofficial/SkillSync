@@ -11,41 +11,43 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/5 to-background">
-        <div className="flex flex-col items-center justify-center gap-6 py-24 text-center">
-          <div className="flex items-center gap-2 rounded-full border bg-background px-4 py-1 text-sm">
-            <Icons.bolt className="h-4 w-4 text-primary" />
-            <span>Where Creatives Connect</span>
-          </div>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block title">Find Opportunities.</span>
-            <span className="block title text-rose-500">Showcase Skills.</span>
-          </h1>
-          <p className="max-w-[700px] text-lg text-muted-foreground">
-            SkillSync bridges the gap between talented creatives and exciting projects.
-            Build your portfolio, discover collaborations, and grow your career.
-          </p>
-          <div className="flex gap-4">
-            <Button size="lg" className="gap-2">
-              <i className="fi fi-rr-user-add"></i>
-              Join as Talent
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <i className="fi fi-rr-briefcase"></i>
-              Post Opportunities
-            </Button>
-          </div>
-          <div className="mt-8 flex items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <Avatar key={i} className="h-10 w-10 border-2 border-background">
-                  <AvatarImage src={`/avatars/avatar-${i}.jpg`} />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-              ))}
+        <Container>
+          <div className="flex flex-col items-center justify-center gap-6 py-24 text-center">
+            <div className="flex items-center gap-2 rounded-full border bg-background px-4 py-1 text-sm">
+              <Icons.bolt className="h-4 w-4 text-primary" />
+              <span>Where Creatives Connect</span>
             </div>
-            <span>Join 10,000+ creatives already collaborating</span>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              <span className="block title">Find Opportunities.</span>
+              <span className="block title text-rose-500">Showcase Skills.</span>
+            </h1>
+            <p className="max-w-[700px] text-lg text-muted-foreground">
+              SkillSync bridges the gap between talented creatives and exciting projects.
+              Build your portfolio, discover collaborations, and grow your career.
+            </p>
+            <div className="flex sm:flex-row flex-col gap-4">
+              <Button size="lg" className="gap-2">
+                <i className="fi fi-rr-user-add"></i>
+                Join as Talent
+              </Button>
+              <Button size="lg" variant="outline" className="gap-2">
+                <i className="fi fi-rr-briefcase"></i>
+                Post Opportunities
+              </Button>
+            </div>
+            <div className="mt-8 flex sm:flex-row flex-col items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <Avatar key={i} className="h-10 w-10 border-2 border-background">
+                    <AvatarImage src={`/avatars/avatar-${i}.jpg`} />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                ))}
+              </div>
+              <span>Join 10,000+ creatives already collaborating</span>
+            </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* How It Works */}
