@@ -1,12 +1,17 @@
+'use client'
+
 import Container from '@/components/container'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
+import { usePathname } from 'next/navigation'
+import { Switch } from "@/components/ui/switch"
 
-const header = () => {
+const Header = () => {
+    const path = usePathname();
     return (
-        <div className='w-full bg-white sticky top-0 flex items-center z-50'>
-            <Container>
+        <div className='w-full bg-secondary sticky top-0 flex items-center z-50'>
+            <Container variant='xl'>
                 <div className='flex items-center justify-between py-4'>
                     <Link href='/'>
                         <Image
@@ -15,21 +20,26 @@ const header = () => {
                             width={100}
                             height={100}
                             className='w-40 object-contain'
-                        /></Link>
+                        />
+                    </Link>
                     <nav className='space-x-6'>
-                        <Link href="/" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>Home</Link>
-                        <Link href="/courses" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>Features</Link>
-                        <Link href="/about" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>Explore</Link>
-                        <Link href="/contact" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>Pricing</Link>
-                        <Link href="/contact" className='text-gray-700 text-base font-medium hover:text-rose-500 transition-colors duration-300'>About</Link>
-                        <Button className='bg-rose-500 text-white cursor-pointer ml-6 font-medium hover:bg-rose-600 transition-colors duration-300'>
+                        <Link href="/" className={`${path === '/' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Home</Link>
+                        <Link href="/features" className={`${path === '/features' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Features</Link>
+                        <Link href="/explore" className={`${path === '/explore' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Explore</Link>
+                        <Link href="/about" className={`${path === '/about' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>About</Link>
+                        <Link href="/contact" className={`${path === '/contact' ? 'text-accent' : 'text-foreground'} text-base font-medium hover:text-accent transition-colors duration-300`}>Contact</Link>
+                    </nav>
+
+                    <div className="flex items-center gap-3">
+                        <Switch className="translate-y-0.5" />
+                        <Button className="bg-accent hover:bg-accent/50 text-foreground" size="sm">
                             <Link href='/login'>Login</Link>
                         </Button>
-                    </nav>
+                    </div>
                 </div>
             </Container>
         </div>
     )
 }
 
-export default header
+export default Header

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Quicksand, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -24,14 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <header>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'></link>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'></link>
       </header>
-      <body className={`${quicksand.variable} ${inter.variable} antialiased` + " bg-gray-100 text-gray-900"}>
+      <body className={`${quicksand.variable} ${inter.variable} antialiased` + " bg-background text-foreground"}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

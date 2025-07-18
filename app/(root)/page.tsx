@@ -26,7 +26,7 @@ export default function Home() {
           </p>
           <div className="flex gap-4">
             <Button size="lg" className="gap-2">
-              <i className="fi fi-rr-user"></i>
+              <i className="fi fi-rr-user-add"></i>
               Join as Talent
             </Button>
             <Button size="lg" variant="outline" className="gap-2">
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="mt-8 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
-                <Avatar key={i} className="h-8 w-8 border-2 border-background">
+                <Avatar key={i} className="h-10 w-10 border-2 border-background">
                   <AvatarImage src={`/avatars/avatar-${i}.jpg`} />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
@@ -62,17 +62,17 @@ export default function Home() {
           <div className="mt-16 grid gap-8 sm:grid-cols-3">
             {[
               {
-                icon: <i className="fi fi-rr-user text-gray-600"></i>,
+                icon: <i className="fi fi-rr-user text-accent"></i>,
                 title: "Create Your Profile",
                 description: "Showcase your skills, projects, and experience in minutes."
               },
               {
-                icon: <i className="fi fi-rr-signal-stream text-gray-600"></i>,
+                icon: <i className="fi fi-rr-signal-stream text-accent"></i>,
                 title: "Connect & Discover",
                 description: "Find projects matching your skills or talent for your team."
               },
               {
-                icon: <i className="fi fi-rr-users text-gray-600"></i>,
+                icon: <i className="fi fi-rr-users text-accent"></i>,
                 title: "Start Collaborating",
                 description: "Work together seamlessly with built-in tools."
               }
@@ -123,14 +123,14 @@ export default function Home() {
                 skills: ["Copywriting", "SEO", "Social Media"]
               }
             ].map((profile, i) => (
-              <Card key={i} className="group overflow-hidden transition-all hover:shadow-lg">
+              <Card key={i} className="group overflow-hidden transition-all hover:shadow-lg pt-0">
                 <div className="h-48 bg-gradient-to-r from-primary/10 to-muted/50" />
                 <CardHeader className="relative">
-                  <Avatar className="absolute -top-10 h-20 w-20 border-4 border-background">
+                  <Avatar className="absolute -top-20 left-5 h-20 w-20 border-4 border-background">
                     <AvatarImage src={`/avatars/avatar-${i + 1}.jpg`} />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
-                  <div className="mt-6">
+                  <div className="flex flex-col gap-1 mt-6">
                     <CardTitle>{profile.name}</CardTitle>
                     <CardDescription>{profile.role}</CardDescription>
                   </div>
@@ -146,8 +146,9 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <Button variant="link" className="mt-4 -ml-4 group-hover:text-primary">
-                    View Full Profile →
+                  <Button variant="link" className="mt-4 -ml-4 hover:border-none">
+                    View Full Profile
+                    <i className="fi fi-rr-arrow-small-right"></i>
                   </Button>
                 </CardContent>
               </Card>
@@ -228,9 +229,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-accent py-16">
+      <section className="bg-background py-16">
         <Container>
-          <div className="rounded-xl bg-background p-8 text-center shadow-sm">
+          <div className="rounded-xl bg-secondary p-8 text-center shadow-sm">
             <h2 className="text-3xl title font-bold tracking-tight sm:text-4xl">
               Ready to Grow Your Creative Career?
             </h2>
