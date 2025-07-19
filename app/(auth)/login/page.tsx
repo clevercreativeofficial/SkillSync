@@ -7,7 +7,7 @@ import Image from "next/image"
 const page = () => {
     return (
         <div className='w-full min-h-[90vh] flex justify-center items-center'>
-            <form className='max-w-[345px] w-full py-10 px-6 bg-white rounded-2xl' action="">
+            <form className='max-w-sm mx-auto w-full py-10 px-6 bg-background rounded-2xl' action="">
                 <div className='flex flex-col gap-4'>
                     <Image
                         src="/images/skillsync-logo.svg"
