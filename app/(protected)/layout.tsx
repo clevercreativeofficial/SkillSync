@@ -6,6 +6,7 @@ import Footer from "@/components/footer"
 import { store } from '@/lib/redux/store'
 import { Provider } from 'react-redux'
 
+
 const Layout = ({
     children,
 }: Readonly<{

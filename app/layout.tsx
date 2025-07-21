@@ -23,13 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="darks">
-      <header>
+    <html lang="en" className='dark'>
+      <head>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'></link>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'></link>
-      </header>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'></link>
+      </head>
       <body className={`${quicksand.variable} ${inter.variable} antialiased` + " bg-background text-foreground"}>
-        {children}
+          {children}
       </body>
     </html>
   );

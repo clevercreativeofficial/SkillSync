@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/container';
 import { Button } from './ui/button';
+import ThemeToggle from '@/components/themeToggle';
 
 
 const Header = () => {
@@ -22,9 +23,10 @@ const Header = () => {
                             aria-hidden="true"
                         />
                     </Link>
-
+                   
                     {/* Auth Buttons */}
                     <div className="flex items-center gap-3">
+                        
                         <Link href="/login" passHref>
                             <Button variant="ghost" size="sm">
                                 Login
@@ -35,6 +37,7 @@ const Header = () => {
                                 Sign Up
                             </Button>
                         </Link>
+                        <ThemeToggle/>
                     </div>
                 </div>
             </Container>
