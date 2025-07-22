@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Container from '@/components/container'
+import Container from '@/components/layout/container'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Input } from '@/components/ui/input'
@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-background pt-16 pb-6 text-foreground">
-            <Container variant='xl'>
+            <Container variant="lg">
                 <div className="flex flex-col gap-12">
                     <div className="flex flex-col sm:flex-row justify-between gap-6">
                         {/* Branding & Socials */}

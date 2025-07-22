@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 // import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Icons } from "@/components/icons";
-import Container from "@/components/container";
+import Container from "@/components/layout/container";
 
 export default function Home() {
   return (
@@ -14,7 +13,8 @@ export default function Home() {
         <Container>
           <div className="flex flex-col items-center justify-center gap-6 py-24 text-center">
             <div className="flex items-center gap-2 rounded-full border bg-background px-4 py-1 text-sm">
-              <Icons.bolt className="h-4 w-4 text-primary" />
+              {/* <Icons.bolt className="h-4 w-4 text-primary" /> */}
+              <i className="fi fi-rr-circle-bolt"></i>
               <span>Where Creatives Connect</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* How It Works */}
       <section className="py-16">
-        <Container>
+        <Container variant="lg">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl title font-bold tracking-tight sm:text-4xl">
               How SkillSync Works
@@ -98,7 +98,7 @@ export default function Home() {
 
       {/* Profile Showcase */}
       <section className="bg-secondary py-16">
-        <Container>
+        <Container variant="lg">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl title font-bold tracking-tight sm:text-4xl">
               Stunning Portfolio Showcase
@@ -161,7 +161,7 @@ export default function Home() {
 
       {/* Job Preview */}
       <section className="py-16">
-        <Container>
+        <Container variant="lg">
           <div className="text-center">
             <h2 className="text-3xl title font-bold tracking-tight sm:text-4xl">
               Latest Opportunities
@@ -232,7 +232,7 @@ export default function Home() {
 
       {/* Final CTA */}
       <section className="bg-background py-16">
-        <Container>
+        <Container variant="lg">
           <div className="rounded-xl bg-secondary p-8 text-center shadow-sm">
             <h2 className="text-3xl title font-bold tracking-tight sm:text-4xl">
               Ready to Grow Your Creative Career?

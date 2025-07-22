@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Container from '@/components/container';
-import { Button } from './ui/button';
-import ThemeToggle from '@/components/themeToggle';
+import Container from '@/components/layout/container';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage, } from '@/components/ui/avatar'
+import ThemeToggle from '@/components/layout/themeToggle';
 import { useRouter, usePathname } from "next/navigation"
 
-import MobileNavbar from '@/components/navbar'
+import MobileNavbar from '@/components/layout/navbar'
 
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
     }
     return (
         <header className="w-full bg-secondary sticky top-0 z-50 flex items-center">
-            <Container variant="xl">
+            <Container variant="lg">
                 <div className="flex items-center justify-between py-4">
                     {/* Logo */}
                     <Link href="/" aria-label="SkillSync homepage">
@@ -37,7 +38,7 @@ const Header = () => {
                     <div className="flex items-center gap-3">
                         {localStorage.getItem('isAuthenticated') == 'true' ? (
                             <>
-                                <div className="md:flex hidden justify-between items-center gap-8">
+                                <div className="md:flex hidden text-base font-medium justify-between items-center gap-10">
                                     <Link href="/" className={`${path === '/' ? 'text-accent' : ''}`} passHref>
                                         Home
                                     </Link>
@@ -50,7 +51,7 @@ const Header = () => {
                                     <Link href="/about" className={`${path === '/about' ? 'text-accent' : ''}`} passHref>
                                         About
                                     </Link>
-                                    <Button onClick={() => handleLogout()} variant="destructive" size="sm">
+                                    <Button className="hidden" onClick={() => handleLogout()} variant="destructive" size="sm">
                                         Log Out
                                     </Button>
                                 </div>
@@ -73,8 +74,19 @@ const Header = () => {
                             </>
                         )}
 
-                        <ThemeToggle />
                     </div>
+
+                    <div className="flex items-center text-foreground gap-3">
+                        <ThemeToggle />
+                        <div className="w-8 h-8 flex justify-center items-center bg-background rounded-full"><i className="fi fi-rr-messages"></i></div>
+                        <div className="w-8 h-8 flex justify-center items-center bg-background rounded-full"><i className="fi fi-rr-bell-notification-social-media"></i></div>
+                        <Avatar>
+                            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                            <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+                    </div>
+
+                    {/* <ThemeToggle /> */}
                 </div>
             </Container>
         </header>

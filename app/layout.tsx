@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Quicksand, Inter } from "next/font/google";
 import "./globals.css";
 
-import { Providers } from '@/components/themeProvider'
+import { Providers } from '@/components/layout/themeProvider'
 
 
 const quicksand = Quicksand({
