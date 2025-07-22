@@ -16,8 +16,9 @@ const Layout = ({
                     Back Home
                 </Button>
             </Link>
-            
-                <div className="w-full md:flex hidden items-center justify-center bg-secondary">
+
+            <div className="w-full md:flex hidden items-center justify-center bg-secondary">
+                <div>
                     <Container>
                         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl mb-4">
                             <span className="block title">Welcome to</span>
@@ -29,7 +30,8 @@ const Layout = ({
                         </p>
                     </Container>
                 </div>
-            
+            </div>
+
             <div className="md:max-w-md max-w-full w-full">
                 {children}
             </div>

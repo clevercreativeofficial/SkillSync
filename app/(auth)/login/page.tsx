@@ -1,10 +1,17 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
-const page = () => {
+const Page = () => {
+    const router = useRouter()
+    const handleLogin = () =>{
+        localStorage.setItem('isAuthenticated', 'true')
+        router.push('/projects')
+    }
     return (
         <div className='w-full min-h-[90vh] flex justify-center items-center'>
             <form className='max-w-sm mx-auto w-full py-10 px-6 bg-background rounded-2xl' action="">
@@ -37,7 +44,7 @@ const page = () => {
                         </div>
                         <Link href="/forgot-password" className='text-sm text-rose-500 hover:underline'>Forgot Password?</Link>
                     </div>
-                    <Button className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Login</Button>
+                    <Button onClick={()=>handleLogin()} className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Login</Button>
 
                     <Button className="bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 w-full flex items-center justify-center gap-2 duration-300">
                         <Image
@@ -62,4 +69,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
