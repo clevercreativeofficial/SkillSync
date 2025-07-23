@@ -16,35 +16,20 @@ const page = () => {
                         height={100}
                         className='mx-auto mb-4 w-40 object-contain'
                     />
-                    <h1 className='text-2xl font-bold text-center'>Sign Up</h1>
+                    <h1 className='text-2xl font-bold text-center'>Forgot password</h1>
                     <p className="text-sm text-center text-gray-500 mb-4">
-                        Create your account by filling in the details below.
+                        No worries, we&apos;ll send you reset instructions.
                     </p>
- 
-                    <div className='flex flex-col gap-2'>
-                        <Label htmlFor="username">Username</Label>
-                        <Input className="text-sm" type="username" id="username" placeholder="Username" />
-                    </div>
+
                     <div className='flex flex-col gap-2'>
                         <Label htmlFor="email">Email</Label>
                         <Input className="text-sm" type="email" id="email" placeholder="Enter your email" />
                     </div>
 
-                    <Button className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Sign Up</Button>
-
-                    <Button className="bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 w-full flex items-center justify-center gap-2 duration-300">
-                        <Image
-                            src="/images/google-logo.png"
-                            alt="Google Icon"
-                            width={20}
-                            height={20}
-                            className='mr-1'
-                        />
-                        Google
-                    </Button>
+                    <Button className='w-full font-semibold bg-rose-500 cursor-pointer duration-300'>Reset password</Button>
 
                     <p className='text-sm text-center text-gray-500'>
-                        Already have an account?
+                        Back to
                         <Link href="/login" className='text-blue-500 hover:underline'>
                             <Button variant={'link'} className="text-rose-500 cursor-pointer">Login</Button>
                         </Link>

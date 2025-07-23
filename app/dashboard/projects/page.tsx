@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/select";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
-import Container from "@/components/container";
+import Container from "@/components/layout/container";
 
 export default function ProjectsPage() {
     return (
         <div className="py-8">
-            <Container>
+            <Container variant="lg">
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
                         <h1 className="text-3xl font-bold">Explore Projects</h1>

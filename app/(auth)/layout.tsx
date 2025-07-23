@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Container from "@/components/container"
+import Container from "@/components/layout/container"
 
 const Layout = ({
     children,

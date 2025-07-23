@@ -10,7 +10,8 @@ const Page = () => {
     const router = useRouter()
     const handleLogin = () =>{
         localStorage.setItem('isAuthenticated', 'true')
-        router.push('/projects')
+        localStorage.setItem('role', 'talent')
+        router.push('/dashboard')
     }
     return (
         <div className='w-full min-h-[90vh] flex justify-center items-center'>
@@ -24,7 +25,7 @@ const Page = () => {
                         className='mx-auto mb-4 w-40 object-contain'
                     />
                     <h1 className='text-2xl font-bold text-center'>Login</h1>
-                    <p className="text-sm text-gray-500 mb-4">
+                    <p className="text-sm text-center text-gray-500 mb-4">
                         Welcome back! Please enter your details to log in.
                     </p>
 
@@ -57,7 +58,7 @@ const Page = () => {
                         Google
                     </Button>
 
-                    <p className='text-sm text-gray-500'>
+                    <p className='text-sm text-center text-gray-500'>
                         Don&apos;t have an account?
                         <Link href="/sign-up" className='text-blue-500 hover:underline'>
                             <Button variant={'link'} className="text-rose-500 cursor-pointer">Sign Up</Button>
